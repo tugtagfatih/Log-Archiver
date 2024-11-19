@@ -42,10 +42,12 @@ func main() {
 		noPermErr := fmt.Sprintf("open %s/%s: permission denied", archivePath, archiveName)
 		errstr := fmt.Sprintf("%s", err)
 		if errstr == noPermErr {
-			fmt.Println("Required permissions were not found, please run as administrator so the files can be created")
+			fmt.Println("Required permissions were not found, please run as root so the files can be created")
+		} else {
+			fmt.Printf("Error: Logs could not be compressed: %v\n", err)
+			return
 		}
-		fmt.Printf("Error: Logs could not be compressed: %v\n", err)
-		return
+
 	}
 
 	//Logging process details
