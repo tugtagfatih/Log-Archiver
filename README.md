@@ -1,6 +1,6 @@
 # **_tugtagfatih's_ DevOps Tools**
 
-## [Log Archiver](https://roadmap.sh/projects/log-archive-tool)
+## [Log Archiver]
 
 - Provide the log directory as an argument when running the tool. <br /> ``` go run log-archive.go -logdir=/var/log ``` <br /> If the "log-directory" variable is not entered, the ```/var/log``` directory will be selected by default.
 
